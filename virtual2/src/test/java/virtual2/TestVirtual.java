@@ -30,10 +30,6 @@ public class TestVirtual {
 			assertEquals(esperadoUsuario,UsuariosObtenidos);
 		}
 	
-
-	
-
-	
 	@Test
 	
 	public void testSeleccionar_Producto() {
@@ -96,7 +92,7 @@ public class TestVirtual {
 	public void testUsuarioNombre() {
 		System.out.println("Prueba test nombre usuario");
 
-Usuario usuario = new Usuario ("Mario","1234",615436436,"mariomarugan10@hotmail.com");
+		Usuario usuario = new Usuario ("Mario","1234",615436436,"mariomarugan10@hotmail.com");
 		usuario.setNombre("Gabriel");
 		String valorObtenido=usuario.getNombre();
 		String valorEsperado="Gabriel";
@@ -104,4 +100,101 @@ Usuario usuario = new Usuario ("Mario","1234",615436436,"mariomarugan10@hotmail.
 		
 	
 	}
+	@Test
+	
+	public void testUsuarioConstrasenya() {
+		System.out.println("Prueba test constraseña usuario");
+		Usuario usuario = new Usuario ("Mario","1234",615436436,"mariomarugan10@hotmail.com");
+		usuario.setConstrasenya("5678");
+		String valorObtenido=usuario.getConstrasenya();
+		String valorEsperado="5678";
+		assertEquals(valorObtenido,valorEsperado);
+	}
+	
+	@Test
+	
+	public void testUsuarioCorreo() {
+		System.out.println("Prueba test Correo usuario");
+		Usuario usuario = new Usuario ("Mario","1234",615436436,"mariomarugan10@hotmail.com");
+		usuario.setCorreo("juan@hotmail.com");
+		String valorObtenido=usuario.getCorreo();
+		String valorEsperado="juan@hotmail.com";
+		assertEquals(valorObtenido,valorEsperado);
+	}
+	
+	@Test
+	
+	public void testUsuarioTelefono() {
+		System.out.println("Prueba test Telefono usuario");
+		Usuario usuario = new Usuario ("Mario","1234",615436436,"mariomarugan10@hotmail.com");
+		usuario.setTelefono(615436436);
+		int valorObtenido=usuario.getTelefono();
+		int valorEsperado= 615436436;
+		assertEquals(valorObtenido,valorEsperado);
+	}
+	
+	@Test
+	
+	public void testProductoID() {
+		System.out.println("Prueba test Id Producto");
+		Producto producto = new Producto(1, 11, 120, "Xiaomi", "Android", 150);
+		producto.setId(3);
+		int valorObtenido = producto.getId();
+		int valorEsperado = 3;
+		assertEquals(valorObtenido,valorEsperado);
+	}
+	@Test
+	
+	public void testProductoVersionSistema() {
+		System.out.println("Prueba test Telefono Producto");
+		Producto producto = new Producto(1, 11, 120, "Xiaomi", "Android", 150);
+		producto.setVersionSistema(10);
+		int valorObtenido=producto.getVersionSistema();
+		int valorEsperado= 10;
+		assertEquals(valorObtenido,valorEsperado);
+	}
+	@Test
+	
+	public void testProductoCapacidad() {
+		System.out.println("Prueba test Capacidad Producto");
+		Producto producto = new Producto(1, 11, 120, "Xiaomi", "Android", 150);
+		producto.setCapacidad(64);
+		int valorObtenido=producto.getCapacidad();
+		int valorEsperado= 64;
+		assertEquals(valorObtenido,valorEsperado);
+	}
+	@Test
+	
+	public void testProductoPrecio() {
+		System.out.println("Prueba test Precio Producto");
+		Producto producto = new Producto(1, 11, 120, "Xiaomi", "Android", 150);
+		producto.setCapacidad(64);
+		int valorObtenido=producto.getCapacidad();
+		int valorEsperado= 64;
+		assertEquals(valorObtenido,valorEsperado);
+	}
+	
+	@Test
+	
+	public void testProductoMarca() {
+		System.out.println("Prueba test Precio Producto");
+		Producto producto = new Producto(1, 11, 120, "Xiaomi", "Android", 150);
+		producto.setMarca("LG");
+		String valorObtenido=producto.getMarca();
+		String valorEsperado= "LG";
+		assertEquals(valorObtenido,valorEsperado);
+	}
+	
+	@Test
+	
+	public void testProductoSistemaOperativo() {
+		System.out.println("Prueba test Precio Producto");
+		Producto producto = new Producto(1, 11, 120, "Xiaomi", "Android", 150);
+		producto.setSistemaOperativo("IOS");
+		String valorObtenido=producto.getSistemaOperativo();
+		String valorEsperado= "IOS";
+		assertEquals(valorObtenido,valorEsperado);
+	}
+	
+	
 }
