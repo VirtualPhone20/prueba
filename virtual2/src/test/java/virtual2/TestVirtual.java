@@ -69,7 +69,8 @@ public class TestVirtual {
 	
 	@Test
 	
-	public void test4() {
+	public void testListaProductoSeleccionado() {
+		System.out.println("Prueba Crear Producto lista Producto");
 		listaProductos lista = new listaProductos();
 		Producto productoEsperado = lista.getListaMovil().get(0);
 		Producto productoObtenido = lista.sellecionarCompra(1);
@@ -79,7 +80,8 @@ public class TestVirtual {
 	
 	@Test
 	
-	public void test5() {
+	public void testComprobarProductoSeleccionadoDeLista() {
+		System.out.println("Comprobar que el producto selecciondado me devuelva el mismo numero que el de la lista");
 		listaProductos lista = new listaProductos();
 		Producto productoEsperado =null;
 		Producto productoObtenido = lista.sellecionarCompra(999999);
