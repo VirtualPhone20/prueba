@@ -14,7 +14,7 @@ public class TestVirtual {
 
 @Test
 	
-	public void test1() {
+	public void testVerificar_Usuario() {
 		
 			System.out.println("Verificar cuando existe un usuario Registrado.");
 			System.out.println("Por ejemplo: nombre (Pablo), contraseña (syso1234), teléfono (669988551), correo (pablo@gmail.com)");
@@ -36,7 +36,7 @@ public class TestVirtual {
 	
 	@Test
 	
-	public void test2() {
+	public void testSeleccionar_Producto() {
 		
 		System.out.println("Seleccionar Producto por id.");
 		System.out.println("Por ejemplo: id(2), VersionSistema(10), Capacidad(64), Marca(LG), Sistema Operativo(Android), precio(222)");
@@ -55,7 +55,7 @@ public class TestVirtual {
 	
 	@Test
 	
-	public void test3() {
+	public void testSumar_PrecioTotal() {
 		
 		System.out.println("Suma de precio productos para obtener el resultado total");
 		System.out.println("Por ejemplo: id(2), VersionSistema(10), Capacidad(64), Marca(LG), Sistema Operativo(Android), precio(222)");
