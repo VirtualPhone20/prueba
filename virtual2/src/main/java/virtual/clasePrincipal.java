@@ -151,9 +151,6 @@ public class clasePrincipal {
 		usuario1.mostrarUsu();
 	}
 
-	private static boolean ValidarTelefonos(int tel) {
-		// TODO Auto-generated method stub
-		return false;
-	}
+
 
 }
