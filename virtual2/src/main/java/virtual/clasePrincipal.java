@@ -7,6 +7,7 @@ public class clasePrincipal {
 	static Scanner entrada = new Scanner(System.in);
 	static listadoUsuario usuario1 = new listadoUsuario();
 	static Producto p;
+	static Usuario usu;
 	static ticket tick = new ticket();
 	
 	public static void main(String[] args) {
@@ -115,11 +116,32 @@ public class clasePrincipal {
 			
 			System.out.println("Número de teléfono");
 			int tel = entrada.nextInt();
+			// Verificar digitos del telefono
+			boolean valTelefono = usuario1.ValidarTelefonos(tel);
+			while(valTelefono == false) {
+				System.out.println("Introduce un número de 9 digitos");
+				tel = entrada.nextInt(); 
+				valTelefono = usuario1.ValidarTelefonos(tel);
+			}
+			if(valTelefono==true) {
+				System.out.println("Telefono introducido correctamente.");
+			}
+
 			
 			System.out.println("Correo electrónico");
 			String correo = entrada.nextLine();
+	
 			if(correo.isEmpty()) {
 				correo = entrada.nextLine();
+				boolean valCorr = usuario1.ValidarCorreo(correo);		
+				while(valCorr == false) {
+					System.out.println("Introduce un @ en tu correo.");
+					correo = entrada.nextLine(); 
+					valCorr = usuario1.ValidarTelefonos(tel);
+				}
+				if(valCorr==true) {
+					System.out.println("Correo introducido correctamente.");
+				}
 			}
 			
 			usuario1.meterUsuario(nombre, contra, tel, correo);
@@ -127,6 +149,11 @@ public class clasePrincipal {
 		}
 		
 		usuario1.mostrarUsu();
+	}
+
+	private static boolean ValidarTelefonos(int tel) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }

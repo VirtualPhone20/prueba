@@ -10,14 +10,13 @@ public class Usuario {
 		private String correo;
 		private int telefono;
 		public Usuario(String nombre,String constrasenya,int telefono, String correo ) {
-				
+			
 				this.nombre = nombre;
 				this.constrasenya = constrasenya;
 				this.telefono = telefono;
 				this.correo = correo;
 				
 			}
-
 			public String getNombre() {
 				return nombre;
 			}
@@ -42,13 +41,12 @@ public class Usuario {
 			public void setTelefono(int tel) {
 				this.telefono = tel;
 			}
+			
 			public String getDatos() {
-				return "Datos registrados [nombre=" + nombre + ", constrasenya=" + constrasenya + ", correo=" + correo
+				return "Datos registrados [nombre Usuario=" + nombre + ", constrasenya=" + constrasenya + ", correo=" + correo
 						+ ", telefono=" + telefono + "]";
 			}
-	
-		
-		
 
+			
 }
 

@@ -44,4 +44,40 @@ public class listadoUsuario {
 		return verificado;
 		
 	}
-}
+	
+	public boolean ValidarCorreo (String email) {
+		int numArroba = 0;
+		boolean verificarC = false;
+		for (int i = 0; i < email.length(); i++) {
+			if(email.charAt(i) == '@') {
+				numArroba++;
+			}
+		}
+		if(numArroba == 1) {
+			return verificarC = true;
+		}else
+			return verificarC;
+		
+	}
+	
+	public boolean ValidarTelefonos(int tel) {
+		
+		int digitos = 0;
+		boolean VerificarDigitos = false;
+
+			while(tel> 0) {
+				tel = tel/10;
+				digitos++;
+			}
+			if(digitos == 9) {
+				return VerificarDigitos = true;
+				
+			}else
+				return VerificarDigitos;
+		}
+		
+			
+	}
+
+
+

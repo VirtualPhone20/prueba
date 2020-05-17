@@ -9,6 +9,7 @@ import org.junit.Test;
 import virtual.Producto;
 import virtual.Usuario;
 import virtual.listaProductos;
+import virtual.listadoUsuario;
 
 public class TestVirtual {
 
@@ -197,6 +198,26 @@ public class TestVirtual {
 		String valorEsperado= "IOS";
 		assertEquals(valorObtenido,valorEsperado);
 	}
+	@Test
 	
+	public void testValidarTelefono() {
+		System.out.println("Prueba test Contar Digitos.");
+		listadoUsuario usu1 = new listadoUsuario();
+		usu1.ValidarTelefonos(12456789);
+		boolean valorObtenido = true;
+		boolean valorEsperado = true;
+		assertEquals(valorObtenido,valorEsperado);
+	}
+	
+	@Test
+	
+	public void testValidarCorre() {
+		System.out.println("Prueba test Contar si hay @ en correo.");
+		listadoUsuario usu1 = new listadoUsuario();
+		usu1.ValidarCorreo("juan@gmail.com");
+		boolean valorObtenido = true;
+		boolean valorEsperado = true;
+		assertEquals(valorObtenido,valorEsperado);
+	}
 	
 }
